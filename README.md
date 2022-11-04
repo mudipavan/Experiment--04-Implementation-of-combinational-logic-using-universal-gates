@@ -7,9 +7,12 @@ To implement the given logic function using NAND and NOR gates and to verify its
 F=((C'.B.A)'(D'.C.A)'(C.B'.A)')' using NAND gate
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')' using NOR gate
 ## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
-
+## Hardware:
+1. PCs.
+2. Cyclone II.
+3. USB flasher.
+## Software:
+1.Quartus prime
 
 ## Theory
 Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output. 
@@ -25,11 +28,13 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Program:
-/*
+~~~
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
+
 Developed by: S Adithya Chowdary.
+
 RegisterNumber: 212221230100. 
-*/
+~~~
 ## Using NAND:
 ~~~
 module comblogic(a,b,c,d,f);
