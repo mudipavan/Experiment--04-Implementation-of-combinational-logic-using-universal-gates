@@ -26,18 +26,51 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
-## Procedure
 ## Program:
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: S Adithya Chowdary.
+RegisterNumber: 212221230100. 
 */
-## RTL realization
+## Using NAND:
+~~~
+module comblogic(a,b,c,d,f);
+input a,b,c,d;
+output F;
+wire f1,f2,f3;
+assign f1 = (~c&~b&~a);
+assign f2 = (~d&~c&~a);
+assign f3 = (c&~(~b)&~a);
+assign F= f1&~f2&~f3;
+endmodule
+~~~
+## Using NOR Gate:
+~~~
+module comblogic(a,b,c,d,f);
+input a,b,c,d;
+output F;
+wire f1,f2,f3,f4;
+assign f1 = c&(~b)&a;
+assign f2 = d&(~c)&a;
+assign f3 = c&(~b)&a;
+assign f4 = ~(f1|f2|f3);
+not(F,f4);
+endmodule
+~~~
 
 ## Output:
-## RTL
-## Timing Diagram
+## RTL:
+![image](https://user-images.githubusercontent.com/93427248/200048771-c136cdb9-73a1-446d-82bb-b8fd93415f85.png)
+## Timing Diagram:
+![image](https://user-images.githubusercontent.com/93427248/200048816-54769f72-84b2-4869-8b18-9c43c4639af7.png)
+## Truth Table:
+![image](https://user-images.githubusercontent.com/93427248/200048913-f2ad28bc-b281-4e38-bfec-6d8bc929d66b.png)
+## Program 2:
+## RTL:
+![image](https://user-images.githubusercontent.com/93427248/200048996-c6f3a920-a154-45da-b308-fe48fc5bc4c0.png)
+## Timing Diagram:
+![image](https://user-images.githubusercontent.com/93427248/200049052-74bc178f-0f58-443a-872f-c8c6ef804f57.png)
+## Truth Table:
+![image](https://user-images.githubusercontent.com/93427248/200049124-712f58d8-a844-479b-9314-c2fea54d917d.png)
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
