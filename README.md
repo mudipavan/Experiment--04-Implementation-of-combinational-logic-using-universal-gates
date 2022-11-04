@@ -29,7 +29,8 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
 ## Program:
 ~~~
-Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
+Program to implement the given logic function using NAND and NOR gates 
+and to verify its operations in quartus using Verilog programming.
 
 Developed by: S Adithya Chowdary.
 
